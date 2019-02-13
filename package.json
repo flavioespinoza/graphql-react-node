@@ -1,0 +1,25 @@
+{
+  "name": "graphql-react-node",
+  "version": "1.0.0",
+  "description": "GraphQL examples with React and Node",
+  "main": "app.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flavioespinoza/graphql-react-node.git"
+  },
+  "keywords": [
+    "graphql",
+    "apollo",
+    "react",
+    "node"
+  ],
+  "author": "Flavio Espinoza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/flavioespinoza/graphql-react-node/issues"
+  },
+  "homepage": "https://github.com/flavioespinoza/graphql-react-node#readme"
+}
