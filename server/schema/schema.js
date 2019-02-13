@@ -12,7 +12,6 @@ const {
     GraphQLID
 } = graphql
 
-
 const rest_json = [
     {
         "id": "BTCUSD",
@@ -81,8 +80,9 @@ const markets = _.map(rest_json, (obj) => {
         id: obj.id,
         base: obj.baseCurrency,
         quote: obj.quoteCurrency,
-        pairing: obj.id,
+        pairing: `${obj.baseCurrency}${obj.quoteCurrency}`,
         symbol: `${obj.baseCurrency}/${obj.quoteCurrency}`,
+        market_name: `${obj.quote}_${obj.baseCurrency}`,
         increment: +obj.quantityIncrement,
         tick: +obj.tickSize,
         makerFee: +obj.provideLiquidityRate,
