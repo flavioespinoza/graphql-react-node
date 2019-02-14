@@ -30,9 +30,9 @@ const childClass = mergeStyles({
 class Res extends React.Component {
 	constructor (props) {
 		super(props)
-                
-        this._onColumnClick = this._onColumnClick.bind(this)
-		
+
+		this._onColumnClick = this._onColumnClick.bind(this)
+
 		this._columns = [
 			{
 				key: 'name',
@@ -84,16 +84,16 @@ class Res extends React.Component {
 			columns: this._columns
 		}
 
-    }
-    
-    _onColumnClick () {
-        console.log('Column Clicked')
-    }
+	}
+
+	_onColumnClick () {
+		console.log('Column Clicked')
+	}
 
 	render () {
 
-		const { columns } = this.state
-		
+		const {columns} = this.state
+
 		let reservations = []
 
 		if (this.props.data.reservations) {
@@ -105,13 +105,13 @@ class Res extends React.Component {
 		return (
 			<section>
 				{reservations.length > 0 ? <section>
-					<ReservationsList items={reservations} columns={columns} />
-				</section> : <Spinner size={SpinnerSize.large} label="Loading all reservations.." ariaLive="assertive" labelPosition="right" />}
+					<ReservationsList items={reservations} columns={columns}/>
+				</section> : <Spinner size={SpinnerSize.large} label="Loading all reservations.." ariaLive="assertive" labelPosition="right"/>}
 			</section>
-        )
-        
-    }
-    
+		)
+
+	}
+
 }
 
 const Reservations = graphql(getMarketsQuery)(Res)

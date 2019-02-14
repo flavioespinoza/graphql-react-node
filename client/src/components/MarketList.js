@@ -30,9 +30,9 @@ const childClass = mergeStyles({
 class List extends React.Component {
 	constructor (props) {
 		super(props)
-                
-        this._onColumnClick = this._onColumnClick.bind(this)
-		
+
+		this._onColumnClick = this._onColumnClick.bind(this)
+
 		this._items = this.props.items
 
 		this._columns = [
@@ -120,11 +120,11 @@ class List extends React.Component {
 			columns: this._columns
 		}
 
-    }
-    
-    _onColumnClick () {
-        console.log('Column Clicked')
-    }
+	}
+
+	_onColumnClick () {
+		console.log('Column Clicked')
+	}
 
 	render () {
 
@@ -139,13 +139,13 @@ class List extends React.Component {
 		return (
 			<section>
 				{all_markets.length > 0 ? <section>
-					<SimpleList items={all_markets} />
-				</section> : <Spinner size={SpinnerSize.large} label="Loading all markets..." ariaLive="assertive" labelPosition="right" />}
+					<SimpleList items={all_markets}/>
+				</section> : <Spinner size={SpinnerSize.large} label="Loading all markets..." ariaLive="assertive" labelPosition="right"/>}
 			</section>
-        )
-        
-    }
-    
+		)
+
+	}
+
 }
 
 const MarketList = graphql(getMarketsQuery)(List)

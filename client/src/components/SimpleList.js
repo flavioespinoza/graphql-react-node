@@ -32,8 +32,8 @@ const childClass = mergeStyles({
 class List extends React.Component {
 	constructor (props) {
 		super(props)
-                
-        this._onColumnClick = this._onColumnClick.bind(this)
+
+		this._onColumnClick = this._onColumnClick.bind(this)
 		this._onSearch = this._onSearch.bind(this)
 
 		this._items = this.props.items
@@ -124,12 +124,12 @@ class List extends React.Component {
 			items: this._items,
 			columns: this._columns
 		}
-    }
-    
-    _onColumnClick () {
-        console.log('Column Clicked')
 	}
-	
+
+	_onColumnClick () {
+		console.log('Column Clicked')
+	}
+
 	_onSearch = (ev, text) => {
 
 		let _text = _.toLower(text)
@@ -147,27 +147,27 @@ class List extends React.Component {
 
 	render () {
 
-		const { items, columns } = this.state
+		const {items, columns} = this.state
 
 		return (
 			<section>
-				
+
 				<TextField id={'search_all_markets'}
-						   label={'Search by pairing'}
-						   iconProps={{iconName: 'Search'}}
-						   onChange={this._onSearch}/>
+									 label={'Search by pairing'}
+									 iconProps={{iconName: 'Search'}}
+									 onChange={this._onSearch}/>
 
 				<DetailsList items={items}
-											 setKey="set"
-											 columns={columns}
-											 onColumnHeaderClick={this._onColumnClick}
-											 selectionMode={SelectionMode.none}/>
+										 setKey="set"
+										 columns={columns}
+										 onColumnHeaderClick={this._onColumnClick}
+										 selectionMode={SelectionMode.none}/>
 
 			</section>
-        )
-        
-    }
-    
+		)
+
+	}
+
 }
 
 const SimpleList = graphql(getMarketsQuery)(List)

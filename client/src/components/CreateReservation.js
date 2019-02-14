@@ -123,7 +123,7 @@ class CreateReservation extends React.Component {
 			}
 			this.setState(confirmation)
 		}).catch((err) => {
-				console.error(err)
+			console.error(err)
 		})
 
 	}
