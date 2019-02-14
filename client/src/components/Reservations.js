@@ -116,4 +116,4 @@ class Res extends React.Component {
 
 const Reservations = graphql(getMarketsQuery)(Res)
 
-export { Reservations }
+export { Reservations } 

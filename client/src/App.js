@@ -19,7 +19,15 @@ class App extends React.Component {
 
 				<div id={'main'}>
 
-					<CreateReservation/>
+					<div className={'p12'}>
+						<h5 className={'mb0'}>Create Reservation</h5>
+						<CreateReservation/>
+					</div>
+
+					<div className={'p12 mt24'}>
+						<h5 className={'mb0'}>All Reservations</h5>
+						<Reservations/>
+					</div>
 
 				</div>
 

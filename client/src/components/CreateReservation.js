@@ -113,6 +113,7 @@ class CreateReservation extends React.Component {
 			}
 		}).then((res) => {
 			let reservation = res.data.data.createReservation
+			console.log(reservation)
 			let confirmation = {
 				confirm_arrivalDate: reservation.arrivalDate,
 				confirm_departureDate: reservation.departureDate,
