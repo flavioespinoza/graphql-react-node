@@ -1,10 +1,12 @@
 # GraphQL - Node, Apollo, React Examples
 
+> This project was setup for the <img src="img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team to evaluate my GraphQL skills.
+
+---
 
 ## Node Express - GraphOL - MongoDB   
 This project has a MongoDB sandbox setup on mLab.com.  
-This db was setup for the <img src="img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team for this evaluation of my GraphQL skills.
-  
+
 > Step 1.
   
 In the `root folder` create a `.env` file with the following Node Environment Varaibles:
@@ -38,6 +40,8 @@ mutation {
   }
 }
 ```
+
+---
   
 ## Axios with external GraphQL endpoint
   
@@ -104,7 +108,9 @@ Navigate to http://localhost:8080
   
 	}
 ```
-  
+
+---
+
 ## Apollo Client
 
 > Setup Apollo Client
