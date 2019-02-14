@@ -17,13 +17,9 @@ class App extends React.Component {
 		return (
 			<ApolloProvider client={client}>
 
-				<div id={'main'} className={'p12'}>
+				<div id={'main'}>
 
 					<CreateReservation/>
-
-					<div className={'mt12'}>
-						<DeleteReservation />
-					</div>
 
 				</div>
 

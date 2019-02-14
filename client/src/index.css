@@ -12,3 +12,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.form-reservation {
+  width: 375px;
+  height: 667px;
+  margin: 0 auto;
+  border: 1px solid gainsboro;
+}
+
+.label-wide {
+  width: 375px;
+}
+
+label {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
