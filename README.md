@@ -1,4 +1,4 @@
-# GraphQL React Node Examples
+# GraphQL - Node, Apollo, React Examples
 
 
 ## Node Express - GraphOL - MongoDB   
