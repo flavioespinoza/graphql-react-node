@@ -5,6 +5,7 @@ import { ApolloProvider } from 'react-apollo'
 import { MarketList } from './components/MarketList'
 import { Reservations } from './components/Reservations'
 import { CreateReservation } from './components/CreateReservation'
+import { DeleteReservation } from './components/DeleteReservation'
 
 const client = new ApolloClient({
 	// uri: 'http://localhost:4000/my-markets',
@@ -19,6 +20,10 @@ class App extends React.Component {
 				<div id={'main'} className={'p12'}>
 
 					<CreateReservation/>
+
+					<div className={'mt12'}>
+						<DeleteReservation />
+					</div>
 
 				</div>
 

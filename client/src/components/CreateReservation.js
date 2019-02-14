@@ -15,7 +15,13 @@ class CreateReservation extends React.Component {
 
         this._createReservation = this._createReservation.bind(this)
 
-		this.state = {}
+		this.state = {
+            confirm_arrivalDate: null,
+            confirm_departureDate: null,
+            confirm_hotelName: null,
+            confirm_id: null,
+            confirm_name: null,
+        }
 
 	};
 
@@ -46,9 +52,21 @@ class CreateReservation extends React.Component {
                     }
                 `
             }
-          }).then((result) => {
-            console.log(result.data)
-          });
+          }).then((res) => {
+            let reservation = res.data.data.createReservation
+            console.log(reservation)
+            let confirmation = {
+                confirm_arrivalDate: reservation.arrivalDate,
+                confirm_departureDate: reservation.departureDate,
+                confirm_hotelName: reservation.hotelName,
+                confirm_id: reservation.id,
+                confirm_name: reservation.name
+            }
+            this.setState(confirmation)
+          })
+          .catch((err) => {
+              console.error(err)
+          })
 		
 	}
 
@@ -63,9 +81,17 @@ class CreateReservation extends React.Component {
                     onClick={() => {this._createReservation(chance.first(), chance.last(), 'Hilton NYC', '5/24/19', '6/24/19')}}
                 />
 
+                {this.state.confirm_id ? <div>
+                    <h3>Confirmation for {this.state.confirm_name}</h3>
+                    <ul>
+                        <li>Reservation ID: {this.state.confirm_id}</li>
+                        <li>Arrival Date: {this.state.confirm_arrivalDate}</li>
+                        <li>Departure Date: {this.state.confirm_departureDate}</li>
+                        <li>Hotel: {this.state.confirm_hotelName}</li>
+                    </ul>
+                </div> : null}
 
 			</section>
-
 		)
 	};
 
