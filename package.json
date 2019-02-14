@@ -4,6 +4,7 @@
   "description": "GraphQL examples with React and Node",
   "main": "app.js",
   "scripts": {
+    "start": "node server/app.js",
     "test": "test"
   },
   "repository": {
@@ -23,6 +24,13 @@
   },
   "homepage": "https://github.com/flavioespinoza/graphql-react-node#readme",
   "dependencies": {
-    "@flavioespinoza/log_log": "^1.0.7"
+    "@flavioespinoza/log_log": "^1.0.7",
+    "bcrypt": "^3.0.4",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "express-graphql": "^0.7.1",
+    "graphql": "^14.1.1",
+    "lodash": "^4.17.11",
+    "mongoose": "^5.4.12"
   }
 }
