@@ -37,8 +37,7 @@ mutation {
 }
 ```
   
-# Apollo Client with external GraphQL endpoint
-  
+# Axios with external GraphQL endpoint
   
 > cd into the client folder 
 ```bash{.env-code}
@@ -49,16 +48,15 @@ npm start
 ```
 Navigate to http://localhost:8080
   
-#### Create Reservation
-  
-  
+### Create Reservation
+ 
 > Create a reservation and get confirmation using Hilton Hotels dev GraphQL endpoint.
   
 'https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev'
   
 ![](img/localhost.png?0.8317726698521553 )  
   
-##### Using Axios to post a mutation
+### The React component above uses Axios to post a GraphQL mutation
   
 ```javascript
 	_createReservation (firstName, lastName, hotelName, arrivalDate, departureDate) {
@@ -105,9 +103,8 @@ Navigate to http://localhost:8080
 	}
 ```
   
-### Apollo
-  
-  
+# Apollo Client
+
 > Setup Apollo Client
   
 ```javascript
@@ -242,6 +239,8 @@ const Reservations = graphql(getMarketsQuery)(Res)
 export { Reservations } 
   
 ```
+
+### The Apollo query is bound to the component an retrieves all reservations from the external endpoint
   
 > Create a reservation then refresh. You can now search for your reservation in the list below by first and last name.
   
