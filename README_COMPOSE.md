@@ -1,14 +1,13 @@
 # GraphQL React Node Examples
-  
 This project has a MongoDB sandbox setup on mLab.com.  
-This db was setup for the <img src="img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team for this evaluation of my GraphQL skills.
-  
+This db was setup for the <img src="/img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team for this evaluation of my GraphQL skills.
+
 > Step 1.
-  
+
 In the `root folder` create a `.env` file with the following Node Environment Varaibles:
 ```bash{.env-code}
 NODE_ENV=development
-  
+
 MONGODB_URI=mongodb://graphql_user:BigFish1$1@ds335275.mlab.com:35275/graphql
 ```
 > Step 2.
@@ -20,11 +19,11 @@ npm install
 npm start
 ```
 --
-  
+
 Navigate to http://localhost:4000/my-markets
-  
+
 Here you can test my mutation method to add a market to the existing MongoDB on mLab.com
-  
+
 ```graphql{.white-code}
 mutation {
   addMarket(_id: "CCLETH", base: "CCL", quote: "ETH", symbol: "CCL/ETH", pairing:"CCLETH", market_name:"ETH_CCL") {
@@ -36,10 +35,9 @@ mutation {
   }
 }
 ```
-  
+
 # Apollo Client with external GraphQL endpoint
-  
-  
+
 > cd into the client folder 
 ```bash{.env-code}
 npm install
@@ -48,23 +46,21 @@ npm install
 npm start
 ```
 Navigate to http://localhost:8080
-  
+
 #### Create Reservation
-  
-  
+
 > Create a reservation and get confirmation using Hilton Hotels dev GraphQL endpoint.
-  
+
 'https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev'
-  
-![](img/localhost.png?0.8317726698521553 )  
-  
+
+@import "/img/localhost.png"
+
 ##### Using Axios to post a mutation
-  
 ```javascript
 	_createReservation (firstName, lastName, hotelName, arrivalDate, departureDate) {
-  
+
 		const _endpoint = 'https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev'
-  
+
 		axios({
 			url: _endpoint,
 			method: 'post',
@@ -101,20 +97,19 @@ Navigate to http://localhost:8080
 		}).catch((err) => {
 				console.error(err)
 		})
-  
+
 	}
 ```
-  
+
 ### Apollo
-  
-  
+
 > Setup Apollo Client
-  
+
 ```javascript
 import * as React from 'react'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
-  
+
 const client = new ApolloClient({
 	uri: 'https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev',
 })
@@ -131,7 +126,7 @@ import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
 import { ReservationsList } from './ReservationsList'
 import _ from 'lodash'
-  
+
 const reservations = `
 	{
 		reservations {
@@ -144,18 +139,18 @@ const reservations = `
 	}
 `
 const getMarketsQuery = gql`${reservations}`
-  
+
 const childClass = mergeStyles({
 	display: 'block',
 	marginBottom: '10px'
 })
-  
+
 class Res extends React.Component {
 	constructor (props) {
 		super(props)
-  
+                
         this._onColumnClick = this._onColumnClick.bind(this)
-  
+		
 		this._columns = [
 			{
 				key: 'name',
@@ -202,29 +197,29 @@ class Res extends React.Component {
 				}
 			}
 		]
-  
+
 		this.state = {
 			columns: this._columns
 		}
-  
+
     }
-  
+    
     _onColumnClick () {
         console.log('Column Clicked')
     }
-  
+
 	render () {
-  
+
 		const { columns } = this.state
-  
+		
 		let reservations = []
-  
+
 		if (this.props.data.reservations) {
 			reservations = _.filter(this.props.data.reservations, (obj) => {
 				return obj.name !== ''
 			})
 		}
-  
+
 		return (
 			<section>
 				{reservations.length > 0 ? <section>
@@ -232,18 +227,17 @@ class Res extends React.Component {
 				</section> : <Spinner size={SpinnerSize.large} label="Loading all reservations.." ariaLive="assertive" labelPosition="right" />}
 			</section>
         )
-  
+        
     }
-  
+    
 }
-  
+
 const Reservations = graphql(getMarketsQuery)(Res)
-  
+
 export { Reservations } 
-  
+
 ```
-  
+
 > Create a reservation then refresh. You can now search for your reservation in the list below by first and last name.
-  
-![](img/list.png?0.9571717133047106 )  
-  
+
+@import "/img/list.png"
