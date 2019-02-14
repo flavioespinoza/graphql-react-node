@@ -113,7 +113,7 @@ Navigate to http://localhost:8080
 
 ## Apollo Client
 
-> Setup Apollo Client
+> Setup Apollo Client in App.js
   
 ```javascript
 import * as React from 'react'
