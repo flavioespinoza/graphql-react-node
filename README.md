@@ -1,4 +1,6 @@
 # GraphQL React Node Examples
+
+
   
 This project has a MongoDB sandbox setup on mLab.com.  
 This db was setup for the <img src="img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team for this evaluation of my GraphQL skills.
