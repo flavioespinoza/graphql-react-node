@@ -1,7 +1,9 @@
 # GraphQL React Node Examples
-
-
-## Node Express - GraphOL - MongoDB   
+  
+  
+  
+## Node Express - GraphOL - MongoDB
+  
 This project has a MongoDB sandbox setup on mLab.com.  
 This db was setup for the <img src="img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team for this evaluation of my GraphQL skills.
   
@@ -41,6 +43,7 @@ mutation {
   
 ## Axios with external GraphQL endpoint
   
+  
 > cd into the client folder 
 ```bash{.env-code}
 npm install
@@ -51,7 +54,8 @@ npm start
 Navigate to http://localhost:8080
   
 ### Create Reservation
- 
+  
+  
 > Create a reservation and get confirmation using Hilton Hotels dev GraphQL endpoint.
   
 'https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev'
@@ -59,6 +63,7 @@ Navigate to http://localhost:8080
 ![](img/localhost.png?0.8317726698521553 )  
   
 ### The React component above uses Axios to post a GraphQL mutation
+  
   
 ```javascript
 	_createReservation (firstName, lastName, hotelName, arrivalDate, departureDate) {
@@ -106,7 +111,8 @@ Navigate to http://localhost:8080
 ```
   
 ## Apollo Client
-
+  
+  
 > Setup Apollo Client
   
 ```javascript
@@ -241,10 +247,12 @@ const Reservations = graphql(getMarketsQuery)(Res)
 export { Reservations } 
   
 ```
-
+  
 ### The Apollo query is bound to the component an retrieves all reservations from the external endpoint
+  
   
 > Create a reservation then refresh. You can now search for your reservation in the list below by first and last name.
   
 ![](img/list.png?0.9571717133047106 )  
+  
   
