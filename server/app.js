@@ -21,8 +21,7 @@ mongoose.connection.once('open', () => {
     _log.info('Connected to MongoDB')
 })
 
-
-app.use('/hitbtc', graphqlHTTP({
+app.use('/my-markets', graphqlHTTP({
 	schema: schema,
 	graphiql: true,
 }))

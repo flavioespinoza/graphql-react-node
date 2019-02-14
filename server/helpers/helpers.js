@@ -72,6 +72,16 @@ const markets = _.map(rest_json, (obj) => {
 		quote: obj.quoteCurrency,
 		symbol: `${obj.baseCurrency}/${obj.quoteCurrency}`,
 		pairing: `${obj.baseCurrency}${obj.quoteCurrency}`,
-		market_name: `${obj.quote}_${obj.baseCurrency}`
+		market_name: `${obj.quoteCurrency}_${obj.baseCurrency}`
 	}
 })
+
+
+let obj_model = {
+    "_id": "_id",
+    "base": "base",
+    "quote": "quote",
+    "symbol": "symbol",
+    "pairing": "pairing",
+    "market_name": "market_name"
+}

@@ -7,7 +7,8 @@ const marketSchema = new Schema({
     quote: String,
     pairing: String,
     symbol: String,
-    market_name: String
+    market_name: String,
+    market_id: String,
 })
 
 module.exports = mongoose.model('Market', marketSchema)

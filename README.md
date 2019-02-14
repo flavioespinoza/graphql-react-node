@@ -11,16 +11,16 @@ NODE_ENV=development
 MONGODB_URI=mongodb://graphql_user:BigFish1$1@ds335275.mlab.com:35275/graphql
 ```
 > Step 2.
-```bash
+```bash{.env-code}
 npm install
 ```
 > Step 3.
-```bash
+```bash{.env-code}
 npm start
 ```
 --
 
-Navigate to http://localhost:5001/hitbtc
+Navigate to http://localhost:5001/my-markets
 
 Here you can test my mutation method to add a market to the existing MongoDB on mLab.com
 
