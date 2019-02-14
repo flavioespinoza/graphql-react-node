@@ -13,7 +13,8 @@ const {
     GraphQLSchema,
     GraphQLID,
     GraphQLList,
-    GraphQLNonNull
+    GraphQLNonNull,
+    GraphQLInputObjectType
 } = graphql
 
 const MarketType = new GraphQLObjectType({
@@ -89,6 +90,19 @@ const RootQuery = new GraphQLObjectType({
         }
     }
 })
+
+
+const ReservationInputType = new GraphQLInputObjectType({
+    name: 'ReservationInputType',
+    fields: {
+        name: {type: GraphQLString},
+        hotelName: {type: GraphQLString},
+        arrivalDate: {type: GraphQLString},
+        departureDate: {type: GraphQLString}
+    }
+})
+
+
 
 const Mutation = new GraphQLObjectType({
     name: 'Mutation',

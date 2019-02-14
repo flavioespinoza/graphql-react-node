@@ -5,11 +5,13 @@ const _log = require('@flavioespinoza/log_log')._log
 const log = require('@flavioespinoza/log_log').log
 
 const express = require('express')
+const cors = require('cors')
 const graphqlHTTP = require('express-graphql')
 const schema = require('./schema/schema')
 const mongoose = require('mongoose')
 
 const app = express()
+app.use(cors())
 
 const MONGODB_URI = process.env.MONGODB_URI
 const options = {
@@ -26,7 +28,7 @@ app.use('/my-markets', graphqlHTTP({
 	graphiql: true,
 }))
 
-const PORT = 5001
+const PORT = 4000
 
 app.listen(PORT, () => {
 	console.log('listening on port: ' + PORT)
