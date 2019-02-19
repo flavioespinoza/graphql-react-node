@@ -20,12 +20,12 @@ const options = {
 }
 mongoose.connect(MONGODB_URI, options)
 mongoose.connection.once('open', () => {
-    _log.info('Connected to MongoDB')
+	_log.info('Connected to MongoDB')
 })
 
 app.use('/my-markets', graphqlHTTP({
 	schema: schema,
-	graphiql: true,
+	graphiql: true
 }))
 
 const PORT = 4000

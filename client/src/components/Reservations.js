@@ -1,8 +1,5 @@
 import * as React from 'react'
-import { TextField } from 'office-ui-fabric-react/lib/TextField'
-import { DetailsList, Selection, SelectionMode } from 'office-ui-fabric-react/lib/DetailsList'
 import { Spinner, SpinnerSize } from 'office-ui-fabric-react/lib/Spinner'
-import { Fabric } from 'office-ui-fabric-react/lib/Fabric'
 import { mergeStyles } from 'office-ui-fabric-react/lib/Styling'
 import gql from 'graphql-tag'
 import { graphql } from 'react-apollo'
@@ -20,12 +17,14 @@ const reservations = `
 		}
 	}
 `
-const getMarketsQuery = gql`${reservations}`
-
-const childClass = mergeStyles({
-	display: 'block',
-	marginBottom: '10px'
-})
+const getMarketsQuery = gql`
+	query GetReservations {
+	  reservations {
+		id
+		name
+	  }
+	}
+`
 
 class Res extends React.Component {
 	constructor (props) {
@@ -104,7 +103,7 @@ class Res extends React.Component {
 
 		return (
 			<section>
-				{reservations.length > 0 ? <section>
+				{reservations.length > 0 ? <section className={'child'}>
 					<ReservationsList items={reservations} columns={columns}/>
 				</section> : <Spinner size={SpinnerSize.large} label="Loading all reservations.." ariaLive="assertive" labelPosition="right"/>}
 			</section>

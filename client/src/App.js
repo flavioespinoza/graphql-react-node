@@ -1,11 +1,8 @@
 import React from 'react'
 import ApolloClient from 'apollo-boost'
 import { ApolloProvider } from 'react-apollo'
-
-import { MarketList } from './components/MarketList'
 import { Reservations } from './components/Reservations'
 import { CreateReservation } from './components/CreateReservation'
-import { DeleteReservation } from './components/DeleteReservation'
 
 const client = new ApolloClient({
 	// uri: 'http://localhost:4000/my-markets',
@@ -17,19 +14,21 @@ class App extends React.Component {
 		return (
 			<ApolloProvider client={client}>
 
-				<div id={'main'}>
+				<section className={'wrapper'}>
+					<div id={'main'}>
 
-					<div className={'p12'}>
-						<h5 className={'mb0'}>Create Reservation</h5>
-						<CreateReservation/>
+						<div className={'p12 create-reservations'}>
+
+							<CreateReservation/>
+						</div>
+
+						<div className={'p12 reservations'}>
+							<h5 className={'mb0'}>All Reservations</h5>
+							<Reservations/>
+						</div>
+
 					</div>
-
-					<div className={'p12 mt24'}>
-						<h5 className={'mb0'}>All Reservations</h5>
-						<Reservations/>
-					</div>
-
-				</div>
+				</section>
 
 			</ApolloProvider>
 		)

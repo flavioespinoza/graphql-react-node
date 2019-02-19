@@ -6,11 +6,6 @@ import _ from 'lodash'
 
 let _items = []
 
-const childClass = mergeStyles({
-	display: 'block',
-	marginBottom: '10px'
-})
-
 class ReservationsList extends React.Component {
 	constructor (props) {
 		super(props)
@@ -57,15 +52,15 @@ class ReservationsList extends React.Component {
 			<section>
 
 				<TextField id={'search_all_markets'}
-									 label={`Search by Customer`}
-									 iconProps={{iconName: 'Search'}}
-									 onChange={this._onSearch}/>
+						   label={`Search by Customer`}
+						   iconProps={{iconName: 'Search'}}
+						   onChange={this._onSearch}/>
 
 				<DetailsList items={items}
-										 setKey="set"
-										 columns={columns}
-										 onColumnHeaderClick={this._onColumnClick}
-										 selectionMode={SelectionMode.none}/>
+							 setKey="set"
+							 columns={columns}
+							 onColumnHeaderClick={this._onColumnClick}
+							 selectionMode={SelectionMode.none}/>
 
 			</section>
 		)
