@@ -75,7 +75,7 @@ _createReservation (firstName, lastName, hotelName, arrivalDate, departureDate) 
                 mutation {
                     createReservation(
                         data: {
-                                name: "${firstName} ${lastName}"
+                                name: "${firstName} ${lastName}" // <-- MUST USE DOUBLE QUOTES
                                 hotelName: "${hotelName}"
                                 arrivalDate: "${arrivalDate}"
                                 departureDate: "${departureDate}"
