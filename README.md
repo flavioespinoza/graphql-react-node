@@ -60,7 +60,7 @@ Navigate to http://localhost:8080
   
 'https://us1.prisma.sh/public-luckox-377/reservation-graphql-backend/dev'
   
-### The React component shown in the image below uses Axios to post mutations to GraphQL
+### Axios is used inside a React method to post mutations to GraphQL
   
 ```javascript
 _createReservation (firstName, lastName, hotelName, arrivalDate, departureDate) {
