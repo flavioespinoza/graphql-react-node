@@ -25,9 +25,11 @@ npm install
 ```
 
 > Step 3.
+
 ```bash {.copy-clip}
 npm start
 ```
+
 --
   
 Navigate to http://localhost:4000/my-markets
