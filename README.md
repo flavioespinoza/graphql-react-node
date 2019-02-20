@@ -1,4 +1,4 @@
-# GraphQL - Node, Apollo, React Examples
+# GraphQL - Node, Apollo, React HELLO
 
 > This project was setup for the <img src="img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team to evaluate my GraphQL skills.
 
