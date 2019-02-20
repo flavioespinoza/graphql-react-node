@@ -6,27 +6,20 @@
 
 ## Node Express - GraphOL - MongoDB   
 This project has a MongoDB sandbox setup on mLab.com.  
-
-> Step 1.
   
 In the `root folder` create a `.env` file with the following Node Environment Varaibles:
 
-```bash {.copy-clip}
+```bash
 NODE_ENV=development
   
 MONGODB_URI=mongodb://graphql_user:BigFish1$1@ds335275.mlab.com:35275/graphql
 ```
 
-
-> Step 2.
-
-```bash {.copy-clip}
+```bash{.copy-clip}
 npm install
 ```
 
-> Step 3.
-
-```bash {.copy-clip}
+```bash{.copy-clip}
 npm start
 ```
 
