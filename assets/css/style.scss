@@ -120,6 +120,7 @@ blockquote {
 code {
     font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
     color: $colorPurple !important;
+    background-color: #434343 !important;
     font-size: 13px;
     margin: 0 4px;
     padding: 4px 6px;
@@ -137,6 +138,7 @@ pre {
 
     code {
         color: $colorPurple !important;
+        background-color: #434343 !important;
         text-shadow: 0px 1px 0px #000;
         margin: 0;
         padding: 0;
