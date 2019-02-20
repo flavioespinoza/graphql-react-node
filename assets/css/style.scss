@@ -324,3 +324,195 @@ section {
         display: none;
     }
 }
+
+
+.markdown-preview.markdown-preview {
+    // modify your style here
+    // eg: background-color: blue;  
+    ul {
+      list-style-type: none;
+    }
+  
+  }
+  
+  .markdown-preview.markdown-preview {
+    // please write your custom style here
+    // eg:
+    //  color: blue;          // change font color
+    //  font-size: 14px;      // change font size
+    // custom pdf output style
+    @media print {
+    }
+  
+    // custom prince pdf export style
+    &.prince {
+    }
+  
+    // custom phantomjs png/jpeg export style
+    &.phantomjs-image {
+    }
+  
+    //custom phantomjs pdf export style
+    &.phantomjs-pdf {
+    }
+  
+    // custom presentation style
+    .reveal .slides {
+      // modify all slides
+    }
+  
+    .slides > section:nth-child(1) {
+      // this will modify `the first slide`
+    }
+  }
+  
+  .md-sidebar-toc.md-sidebar-toc {
+    // sidebar TOC style
+  }
+  
+  code[class*=language-],pre[class*=language-] {
+    background: #2a2734;
+    color: #a4adb6;
+    font-family: 'Source Code Pro',Consolas,Monaco,'Andale Mono',monospace;
+    direction: ltr;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none
+  }
+  
+  code[class*=language-] ::-moz-selection,code[class*=language-]::-moz-selection,pre[class*=language-] ::-moz-selection,pre[class*=language-]::-moz-selection {
+    color: inherit;
+    background: rgba(33,66,131,.85)
+  }
+  
+  code[class*=language-] ::selection,code[class*=language-]::selection,pre[class*=language-] ::selection,pre[class*=language-]::selection {
+    color: inherit;
+    background: rgba(33,66,131,.85)
+  }
+  
+  pre[class*=language-] {
+    padding: 1em;
+    margin: .5em 0;
+    overflow: auto
+  }
+  
+  :not(pre)>code[class*=language-],pre[class*=language-] {
+    background: #2a2734
+  }
+  
+  :not(pre)>code[class*=language-] {
+    padding: .1em;
+    border-radius: .3em
+  }
+  
+  .token.cdata,.token.comment,.token.prolog {
+    color: grey
+  }
+  
+  .token.atrule,.token.boolean,.token.delimiter,.token.important,.token.keyword,.token.selector {
+    color: #edf0b4;
+  }
+  
+  .token.attr-name,.token.operator,.token.punctuation {
+    color: #409240
+  }
+  
+  .token.builtin,.token.doctype,.token.tag,.token.tag .punctuation {
+    color: #af7ac4
+  }
+  
+  .token.entity,.token.number,.token.symbol {
+    color: #DB61C6
+  }
+  
+  .token.constant,.token.property,.token.variable {
+    color: #edf0b4
+  }
+  
+  .token.function {
+    color: #af7ac4
+  }
+  
+  .token.char,.token.string {
+    color: #5CD45C
+  }
+  
+  .token.attr-value,.token.attr-value .punctuation {
+    color: #6a8759
+  }
+  
+  .token.attr-value .punctuation:first-child {
+    color: #a9b7c6
+  }
+  
+  .token.url {
+    color: #287bde;
+    text-decoration: underline
+  }
+  
+  .token.regex {
+    background: #364135
+  }
+  
+  .token.italic {
+    font-style: italic
+  }
+  
+  .token.inserted {
+    background: #294436
+  }
+  
+  .token.deleted {
+    background: #484a4a
+  }
+  
+  code.language-css .token.property,code.language-css .token.property+.token.punctuation {
+    color: #a9b7c6
+  }
+  
+  code.language-css .token.id,code.language-css .token.selector>.token.attribute,code.language-css .token.selector>.token.class,code.language-css .token.selector>.token.pseudo-class,code.language-css .token.selector>.token.pseudo-element {
+    color: #edf0b4
+  }
+  
+  html body code {
+    font-family: Menlo,Monaco,Consolas,'Courier New',monospace;
+    font-size: .85em !important;
+    color: black;
+    background-color:#B7E3C0;
+    border-radius: 1px;
+    padding: .2em 0;
+  }
+  
+  html body blockquote {
+    margin: 16px 0;
+    font-size: inherit;
+    padding: 0 15px;
+    color: #5c5c5c;
+    background: rgb(239, 239, 239);
+    border-left: 4px solid #bbbbbb;
+    padding-top: 4px !important;
+    padding-bottom: 4px !important;
+    padding-right: 12px !important;
+  }
+  
+  .markdown-preview.markdown-preview {
+     
+    ul {
+      list-style-type: none;
+    }
+  
+    .copy-clip {
+      color: #50c6fd !important;
+      .token.function {
+        color: #dcedc7 !important;
+      }
+    }
+  
+  }
