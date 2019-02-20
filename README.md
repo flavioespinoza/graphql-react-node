@@ -4,7 +4,7 @@
 
 ---
 
-## Node Express - GraphOL - CHANGE   
+## Node Express - GraphOL - back   
 This project has a MongoDB sandbox setup on mLab.com.  
   
 In the `root folder` create a `.env` file with the following Node Environment Varaibles:
