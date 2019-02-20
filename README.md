@@ -15,11 +15,11 @@ NODE_ENV=development
 MONGODB_URI=mongodb://graphql_user:BigFish1$1@ds335275.mlab.com:35275/graphql
 ```
 
-```bash{.copy-clip}
+```bash {.copy-clip-test}
 npm install
 ```
 
-```bash{.copy-clip}
+```bash {.copy-clip-test}
 npm start
 ```
 
