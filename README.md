@@ -16,7 +16,7 @@ NODE_ENV=development
 MONGODB_URI=mongodb://graphql_user:BigFish1$1@ds335275.mlab.com:35275/graphql
 ```
 > Step 2.
-```bash{.env-code}
+```bash {.copy-clip}
 npm install
 ```
 > Step 3.
