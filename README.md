@@ -1,10 +1,10 @@
-# GraphQL - Node, Apollo, React Change
+# GraphQL - Node, Apollo, React
 
 > This project was setup for the <img src="img/pwc_logo.png" width="40" style="padding-left: 6px; margin-bottom: -3px;"> team to evaluate my GraphQL skills.
 
 ---
 
-## Node Express - GraphOL - back   
+## Environment Variables  
 This project has a MongoDB sandbox setup on mLab.com.  
   
 In the `root folder` create a `.env` file with the following Node Environment Varaibles:
@@ -22,10 +22,6 @@ npm install
 ```java
 npm start
 ```
-
-# CHANGE
-
---
   
 Navigate to http://localhost:4000/my-markets
   
